@@ -8,7 +8,7 @@ const { ProductModel } = require("../db");
 async function main() {
   await connection.init();
 
-  app.use("*", cors());
+  app.use(cors());
   app.get("/products", async (req, res) => {
     try {
       const products = await ProductModel.find();
